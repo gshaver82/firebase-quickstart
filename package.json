@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "if-env": "^1.0.4",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.10.2"
   }
 }

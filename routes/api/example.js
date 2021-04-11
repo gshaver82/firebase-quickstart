@@ -4,7 +4,6 @@ const exampleController = require("../../controllers/exampleController");
 // Matches with "/api/recipes"
 router.route("/")
     .get(exampleController.findAll)
-    .post(exampleController.create);
 
 
 module.exports = router;
