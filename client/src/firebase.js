@@ -11,9 +11,9 @@ const config = {
     appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
-const test = firebase.initializeApp(config);
+const firebaseEnvConfigs = firebase.initializeApp(config);
 
-export default test;
+export default firebaseEnvConfigs;
 
 // export default !firebase.apps.length 
 //   ? firebase.initializeApp(config)

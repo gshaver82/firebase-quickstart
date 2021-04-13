@@ -45,3 +45,7 @@ ls: cannot access '/app/build/static/js/*.js': No such file or directory
 
 solution 1
 entered in ALL config vars, uncommented service account in routes index, adjusted package json, reordered buildpacks order to have nodes buildpack AFTER react buildpack. 
+
+--------------
+component private route?
+
