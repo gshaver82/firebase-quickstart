@@ -36,3 +36,12 @@ REACT_APP_FIREBASE_KEY
 REACT_APP_FIREBASE_PROJECT_ID
 REACT_APP_FIREBASE_SENDER_ID
 REACT_APP_FIREBASE_STORAGE_BUCKET
+
+possible problems and solutions
+
+problem 1
+ls: cannot access '/app/build/static/js/*.js': No such file or directory
+2021-04-13T07:17:05.025894+00:00 app[web.1]: Error injecting runtime env: bundle not found '/app/build/static/js/*.js'. See: https://github.com/mars/create-react-app-buildpack/blob/master/README.md#user-content-custom-bundle-location
+
+solution 1
+entered in ALL config vars, uncommented service account in routes index, adjusted package json, reordered buildpacks order to have nodes buildpack AFTER react buildpack. 
