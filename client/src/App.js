@@ -4,7 +4,7 @@ import Login from "./pages/login/Login";
 import exampleHomePage from "./pages/exampleHomeFolder/exampleHomePage";
 import { AuthProvider } from "./component/Auth";
 import PrivateRoute from "./component/PrivateRoute";
-import Gene from "./pages/gene/Gene";
+import secondPage from "./pages/secondFolder/secondPage";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
         <AuthProvider>
             <Router>
                 <Switch>
-                    <Route exact path="/gene" component={Gene} />
+                    <Route exact path="/secondFolder" component={secondPage} />
                     <Route exact path="/login" component={Login} />
                     <PrivateRoute exact path="/exampleHomeFolder" component={exampleHomePage} />
 

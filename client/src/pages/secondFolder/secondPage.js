@@ -1,16 +1,16 @@
 import React from "react";
 
 
-function Genepagetest() {
+function secondPage() {
 
     return (
         <div>
 
             
-            <h1>Genes testing page</h1>
+            <h1>secondPage</h1>
 
             
         </div>
     );
 }
-export default Genepagetest;
+export default secondPage;

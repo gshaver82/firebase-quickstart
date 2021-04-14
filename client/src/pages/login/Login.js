@@ -43,6 +43,19 @@ function Login({history}) {
         }
     }
 
+    // Warning: Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.
+    // in Login (created by Context.Consumer)
+    // in Route (at App.js:22)
+    // in Switch (at App.js:17)
+    // in Router (created by BrowserRouter)
+    // in BrowserRouter (at App.js:16)
+    // in AuthProvider (at App.js:15)
+    // in App (at src/index.js:9)
+    // in StrictMode (at src/index.js:8)
+
+    // suggested fix, remove the if statement to outside and have the render results below
+    // if one thing, render x else render y
+
     return (
         <TestCard>
             {currentUser ? (
