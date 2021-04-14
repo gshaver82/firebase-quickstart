@@ -45,3 +45,21 @@ ls: cannot access '/app/build/static/js/*.js': No such file or directory
 
 solution 1
 entered in ALL config vars, uncommented service account in routes index, adjusted package json, reordered buildpacks order to have nodes buildpack AFTER react buildpack. 
+
+--------------
+fill out .env file
+
+## Firebase
+REACT_APP_FIREBASE_KEY=""
+REACT_APP_FIREBASE_DOMAIN=""
+-------
+the below one line is optional if you have a firebase database or not
+------
+REACT_APP_FIREBASE_DATABASE=""
+REACT_APP_FIREBASE_PROJECT_ID=""
+REACT_APP_FIREBASE_STORAGE_BUCKET=""
+REACT_APP_FIREBASE_SENDER_ID=""
+REACT_APP_FIREBASE_APP_ID=""
+
+--------------------
+

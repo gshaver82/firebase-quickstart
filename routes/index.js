@@ -1,6 +1,8 @@
+const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const admin = require('firebase-admin');
+
 //why is this here? its not in the recipebox
 // const { auth } = require("firebase-admin");
 
