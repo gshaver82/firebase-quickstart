@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import firebaseEnvConfigs from '../../firebase';
-import TestCard from "../../component/TestCard"
+import AuthCard from "../../component/AuthCard"
 import SignUpForm from "../../component/SignUpForm"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import './firebaseui-styling.css';
@@ -15,7 +15,7 @@ function Login({history}) {
         signInFlow: "popup",
         signInOptions: [
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID
+            // firebase.auth.FacebookAuthProvider.PROVIDER_ID
         ],
         callbacks: {
             signInSuccess: () => false
@@ -31,9 +31,9 @@ function Login({history}) {
         event.preventDefault();
         try {
             if (event.target.name === "signin") {
-                await firebase.auth().signInWithEmailAndPassword(userCred.email, userCred.password);
+                await firebaseEnvConfigs.auth().signInWithEmailAndPassword(userCred.email, userCred.password);
             } else if (event.target.name === "signup") {
-                await firebase.auth().createUserWithEmailAndPassword(userCred.email, userCred.password);
+                await firebaseEnvConfigs.auth().createUserWithEmailAndPassword(userCred.email, userCred.password);
             } else {
                 return;
             }
@@ -57,7 +57,7 @@ function Login({history}) {
     // if one thing, render x else render y
 
     return (
-        <TestCard>
+        <AuthCard>
             {currentUser ? (
                 history.push("/exampleHomeFolder")
             ) : (
@@ -67,14 +67,14 @@ function Login({history}) {
                         submitSignin={authenticateUser}
                         submitSignup={authenticateUser}
                     />
-                    <div className="divider font-book-italic">Or</div>
+                    <h1 className="divider font-book-italic">Or</h1>
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}
-                        firebaseAuth={firebase.auth()}
+                        firebaseAuth={firebaseEnvConfigs.auth()}
                     />
                 </>
             )}
-        </TestCard>
+        </AuthCard>
     );
 }
 

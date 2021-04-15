@@ -62,4 +62,12 @@ REACT_APP_FIREBASE_SENDER_ID=""
 REACT_APP_FIREBASE_APP_ID=""
 
 --------------------
+add sign in methods on firebase console under authentication > sign in method.
+
+google, email/password etc
+
+for facebook
+https://developers.facebook.com/docs/facebook-login/web
+look here and for a facebook developer account
+not currently implemented in this quickstart
 

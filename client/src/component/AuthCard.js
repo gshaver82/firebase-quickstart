@@ -1,6 +1,6 @@
 import React from "react";
 
-function TestCard({ children }) {
+function AuthCard({ children }) {
 
     return (
         <div className="container">
@@ -18,4 +18,4 @@ function TestCard({ children }) {
     );
 }
 
-export default TestCard;
+export default AuthCard;

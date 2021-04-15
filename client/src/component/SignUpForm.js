@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import ExitBtn from "../component/CreateRecipe/ExitBtn"
 
-function TestCard({ handleInputChange, submitSignin, submitSignup }) {
+function SignUpForm({ handleInputChange, submitSignin, submitSignup }) {
 
     return (
         <form>
@@ -27,4 +27,4 @@ function TestCard({ handleInputChange, submitSignin, submitSignup }) {
     );
 }
 
-export default TestCard;
+export default SignUpForm;
