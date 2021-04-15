@@ -12,9 +12,4 @@ const config = {
 };
 
 const firebaseEnvConfigs = firebase.initializeApp(config);
-
 export default firebaseEnvConfigs;
-
-// export default !firebase.apps.length 
-//   ? firebase.initializeApp(config)
-//   : firebase.app();

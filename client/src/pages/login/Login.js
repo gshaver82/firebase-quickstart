@@ -1,16 +1,17 @@
 import React, { useState, useContext } from "react";
 import firebaseEnvConfigs from '../../firebase';
-import AuthCard from "../../component/AuthCard"
-import SignUpForm from "../../component/SignUpForm"
+import AuthCard from "../../authComponents/AuthCard"
+import SignUpForm from "../../authComponents/SignUpForm"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import './firebaseui-styling.css';
-import { AuthContext } from "../../component/Auth";
+import { AuthContext } from "../../authComponents/Auth";
 
-function Login({history}) {
-    // This is some crazy bullshit and I have no idea why it's not working correctly. v
+function Login({ history }) {
     const firebase = firebaseEnvConfigs.firebase_;
     const [userCred, setUserCred] = useState({});
     const { currentUser } = useContext(AuthContext);
+    //this will populate the various sign in methods
+    //the render will map through all signin options
     const uiConfig = {
         signInFlow: "popup",
         signInOptions: [
@@ -39,10 +40,20 @@ function Login({history}) {
             }
             history.push("/exampleHomeFolder");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     }
 
+
+    
+    //--------------
+    //this error isnt repeatable, but worth looking into resolving a cleanup function
+    // Warning: Can't perform a React state update on an unmounted component. This is a no-op, 
+    // but it indicates a memory leak in your application. To fix, cancel all 
+    // subscriptions and asynchronous tasks in a useEffect cleanup function.
+
+    //only get the following errors when first logging in after first webpage load
+    //-------------------
     // Warning: Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.
     // in Login (created by Context.Consumer)
     // in Route (at App.js:22)
@@ -62,7 +73,7 @@ function Login({history}) {
                 history.push("/exampleHomeFolder")
             ) : (
                 <>
-                    <SignUpForm 
+                    <SignUpForm
                         handleInputChange={handleInputChange}
                         submitSignin={authenticateUser}
                         submitSignup={authenticateUser}
