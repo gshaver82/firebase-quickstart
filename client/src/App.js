@@ -17,11 +17,11 @@ function App() {
         <AuthProvider>
             <Router>
                 <Switch>
+                    
+                    <Route exact path="/secondPage" component={secondPage} />
+                    <Route exact path="/Login" component={Login} />
+                    <PrivateRoute exact path="/ExampleHomePage" component={ExampleHomePage} />
                     <Route path="/publicHomePage" component={publicHomePage} />
-                    <Route exact path="/secondFolder" component={secondPage} />
-                    <Route exact path="/login" component={Login} />
-                    <PrivateRoute exact path="/exampleHomeFolder" component={ExampleHomePage} />
-
                     <Route path="/" component={publicHomePage} />
                 </Switch>
             </Router>

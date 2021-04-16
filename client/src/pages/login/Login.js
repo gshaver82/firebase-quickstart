@@ -38,6 +38,7 @@ function Login({ history }) {
             } else {
                 return;
             }
+            alert("attempting to push home folder");
             history.push("/exampleHomeFolder");
         } catch (error) {
             console.log(error);
@@ -70,7 +71,7 @@ function Login({ history }) {
     return (
         <AuthCard>
             {currentUser ? (
-                history.push("/exampleHomeFolder")
+                history.push("/ExampleHomePage")
             ) : (
                 <>
                     <SignUpForm
