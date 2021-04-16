@@ -38,7 +38,6 @@ function Login({ history }) {
             } else {
                 return;
             }
-            alert("attempting to push home folder");
             history.push("/exampleHomeFolder");
         } catch (error) {
             console.log(error);

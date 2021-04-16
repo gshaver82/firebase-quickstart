@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
-import ExampleHomePage from "./pages/ExampleHomeFolder/ExampleHomePage";
+import exampleHomePage from "./pages/exampleHomeFolder/exampleHomePage";
 import { AuthProvider } from "./authComponents/Auth";
 import PrivateRoute from "./authComponents/PrivateRoute";
 import secondPage from "./pages/secondFolder/secondPage";
@@ -20,7 +20,7 @@ function App() {
                     
                     <Route exact path="/secondPage" component={secondPage} />
                     <Route exact path="/Login" component={Login} />
-                    <PrivateRoute exact path="/ExampleHomePage" component={ExampleHomePage} />
+                    <PrivateRoute exact path="/exampleHomePage" component={exampleHomePage} />
                     <Route path="/publicHomePage" component={publicHomePage} />
                     <Route path="/" component={publicHomePage} />
                 </Switch>
