@@ -78,7 +78,7 @@ function Login({ history }) {
                         submitSignin={authenticateUser}
                         submitSignup={authenticateUser}
                     />
-                    <h1 className="divider font-book-italic">Or</h1>
+                    <div className="divider font-book-italic">Or</div>
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}
                         firebaseAuth={firebaseEnvConfigs.auth()}

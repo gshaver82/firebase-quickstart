@@ -4,7 +4,7 @@ import firebaseEnvConfigs from '../../firebase';
 import AuthCard from "../../authComponents/AuthCard"
 import { AuthContext } from "../../authComponents/Auth";
 
-function Splash() {
+function PublicHomePage() {
     const app = firebaseEnvConfigs.firebase_;
     const { currentUser } = useContext(AuthContext);
     const [display, setDisplay] = useState(false);
@@ -19,7 +19,7 @@ function Splash() {
                 <section className="d-flex justify-content-center my-4">
                     {!!currentUser ? (
                         <>
-                            <Link to="/recipebox" className="btn-secondary rb-btn mr-4">Recipe Box</Link> 
+                            <Link to="/exampleHomeFolder" className="btn-secondary rb-btn mr-4">User Console</Link> 
                             <button className="rb-btn btn-info" onClick={() => app.auth().signOut()}>Sign Out</button>
                         </>
                         ) : (
@@ -32,4 +32,4 @@ function Splash() {
     );
 }
 
-export default Splash;
+export default PublicHomePage;

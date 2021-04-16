@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function secondPage() {
+function SecondPage() {
 
     return (
         <div>
@@ -13,4 +13,4 @@ function secondPage() {
         </div>
     );
 }
-export default secondPage;
+export default SecondPage;

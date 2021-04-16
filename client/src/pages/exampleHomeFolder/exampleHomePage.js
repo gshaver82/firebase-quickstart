@@ -1,7 +1,7 @@
 import React from "react";
 import firebaseEnvConfigs from '../../firebase';
 
-function RecipeBox() {
+function ExampleHomePage() {
 
 
     return (
@@ -16,4 +16,4 @@ function RecipeBox() {
     );
 }
 
-export default RecipeBox;
+export default ExampleHomePage;

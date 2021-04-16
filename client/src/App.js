@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
-import exampleHomePage from "./pages/exampleHomeFolder/exampleHomePage";
+import ExampleHomePage from "./pages/ExampleHomeFolder/ExampleHomePage";
 import { AuthProvider } from "./authComponents/Auth";
 import PrivateRoute from "./authComponents/PrivateRoute";
 import secondPage from "./pages/secondFolder/secondPage";
-import Splash from "./pages/splash/Splash";
+import publicHomePage from "./pages/publicHomeFolder/publicHomePage";
+import "./style.css";
 
 function App() {
 
@@ -16,11 +17,12 @@ function App() {
         <AuthProvider>
             <Router>
                 <Switch>
+                    <Route path="/publicHomePage" component={publicHomePage} />
                     <Route exact path="/secondFolder" component={secondPage} />
                     <Route exact path="/login" component={Login} />
-                    <PrivateRoute exact path="/exampleHomeFolder" component={exampleHomePage} />
+                    <PrivateRoute exact path="/exampleHomeFolder" component={ExampleHomePage} />
 
-                    <Route exact path="/" component={Splash} />
+                    <Route path="/" component={publicHomePage} />
                 </Switch>
             </Router>
         </AuthProvider>

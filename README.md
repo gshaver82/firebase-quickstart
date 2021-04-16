@@ -1,4 +1,14 @@
+# quickstart starter code
+this uses react with firebase authentication for google and email (more can be added). 
 
+# current status
+currently working, but not yet polished.
+
+lots of old css code copy pasted over from another project that hasnt been sanitized. 
+readme not organized
+
+
+# Step by step install instructions
 heroku config vars
 NODE_ENV
 production
@@ -72,6 +82,4 @@ look here and for a facebook developer account
 not currently implemented in this quickstart
 
 
-currently working, but not yet polished.
 
-lots of old css code copy pasted over from another project that hasnt been sanitized. 

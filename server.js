@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // mongoose.connect(
-//     process.env.MONGODB_URI || "mongodb://localhost/recipes_hybrid_DB",
+//     process.env.MONGODB_URI || "mongodb://localhost/example_DB",
 //     {
 //         useUnifiedTopology: true,
 //         useNewUrlParser: true,
