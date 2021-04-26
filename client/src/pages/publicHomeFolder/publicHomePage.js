@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
 import firebaseEnvConfigs from '../../firebase';
-import AuthCard from "../../authComponents/AuthCard"
-import { AuthContext } from "../../authComponents/Auth";
+import AuthCard from "../../quickstartComponents/AuthCard"
+import { AuthContext } from "../../quickstartComponents/Auth";
 
 function PublicHomePage() {
     const app = firebaseEnvConfigs.firebase_;

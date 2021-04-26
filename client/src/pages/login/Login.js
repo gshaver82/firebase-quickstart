@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import firebaseEnvConfigs from '../../firebase';
-import AuthCard from "../../authComponents/AuthCard"
-import SignUpForm from "../../authComponents/SignUpForm"
+import AuthCard from "../../quickstartComponents/AuthCard"
+import SignUpForm from "../../quickstartComponents/SignUpForm"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import './firebaseui-styling.css';
-import { AuthContext } from "../../authComponents/Auth";
+import { AuthContext } from "../../quickstartComponents/Auth";
 
 function Login({ history }) {
     const firebase = firebaseEnvConfigs.firebase_;
@@ -38,7 +38,7 @@ function Login({ history }) {
             } else {
                 return;
             }
-            history.push("/exampleHomeFolder");
+            history.push("/exampleHomePage");
         } catch (error) {
             console.log(error);
         }
