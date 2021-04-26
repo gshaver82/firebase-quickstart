@@ -38,6 +38,11 @@ add config vars for heroku authentication deployment
 
 NODE_ENV
 FIREBASE_PRIVATE_KEY
+
+find and replace \n with nothing
+recommend to copy and paste the key to a file thats in use, do the find and replace and 
+DELETE the copied key. you will expose the key if not and its a bit of a pain to fix
+
 FIREBASE_PROJECT_ID
 FIREBASE_CLIENT_EMAIL
 REACT_APP_FIREBASE_APP_ID
@@ -81,5 +86,19 @@ https://developers.facebook.com/docs/facebook-login/web
 look here and for a facebook developer account
 not currently implemented in this quickstart
 
+----------------
+If global credentials are accidentaly exposed 
+(for example, uploaded to github without gitignore blocking the upload)
+then you will get angry emails from google letting you know that the key was exposed
+you will be asked to correct the problem AND change keys.
 
+first, correct the gitignore to exclude serviceAccountKey.json or find where the key is that is being uploaded and correct that. 
+
+then go to firebase console > gear top left > project settings > service accounts > 
+manage service account permissions
+
+find compromised key > click the dot dot dot and manage keys and add a key. 
+this should download a new json. copy that to to the service account key json. 
+
+----------------
 
