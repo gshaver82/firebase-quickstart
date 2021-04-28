@@ -15,12 +15,15 @@ production
 
 create new firebase project card
 
-go to project settings and add app to project
+click gear and go to project settings and add firebase to your webapp ( the "</>" icon)
 
-register app
-go to the app and CDN snippet and copy unique API KEY codes etc over to service account key
+click gear and go to project settings > general settings
 
-go to >> settings>> service accounts>> generate new private key
+Firebase SDK snippet click CDN snippet 
+
+copy unique API KEY codes etc over to service account key
+
+click gear and go to project settings >> service accounts>> generate new private key
 put that info into service acount key
 
 
@@ -28,11 +31,16 @@ put firebase database URL routes index if needed.
  "databaseURL": "",
 
 when setting up firebase auth
+authentication >> get started
 authentication >> sign in method
 
-and enable google and add authorized domain of the host (example heroku)
+and enable google 
+
+add deployed website URL to authorized domains (example, full heroku website URL)
 
 ------------------
+
+heroku settings 
 add config vars for heroku authentication deployment
 
 
@@ -43,14 +51,22 @@ find and replace \n with nothing
 recommend to copy and paste the key to a file thats in use, do the find and replace and 
 DELETE the copied key. you will expose the key if not and its a bit of a pain to fix
 
-FIREBASE_PROJECT_ID
-FIREBASE_CLIENT_EMAIL
-REACT_APP_FIREBASE_APP_ID
-REACT_APP_FIREBASE_DOMAIN
-REACT_APP_FIREBASE_KEY
-REACT_APP_FIREBASE_PROJECT_ID
-REACT_APP_FIREBASE_SENDER_ID
-REACT_APP_FIREBASE_STORAGE_BUCKET
+FIREBASE_PROJECT_ID is project_id
+FIREBASE_CLIENT_EMAIL is client_email
+REACT_APP_FIREBASE_APP_ID is appId
+REACT_APP_FIREBASE_DOMAIN is authDomain
+REACT_APP_FIREBASE_KEY is apiKey
+REACT_APP_FIREBASE_PROJECT_ID is project_id
+REACT_APP_FIREBASE_SENDER_ID is messagingSenderId
+REACT_APP_FIREBASE_STORAGE_BUCKET is storageBucket
+
+add buildpacks
+heroku settings 
+https://github.com/mars/create-react-app-buildpack.git
+click button for 
+heroku/nodejs
+
+have node.js below react buildpack (unsure if this matters)
 
 possible problems and solutions
 
@@ -101,4 +117,7 @@ find compromised key > click the dot dot dot and manage keys and add a key.
 this should download a new json. copy that to to the service account key json. 
 
 ----------------
+
+
+
 
