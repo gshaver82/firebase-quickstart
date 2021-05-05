@@ -118,6 +118,16 @@ this should download a new json. copy that to to the service account key json.
 
 ----------------
 
+adding mongoose db
+
+do stuff in here
+https://www.mongodb.com/cloud
 
 
+ the line below goes into MONGODB_URI config vars
 
+mongodb+srv://<username>:<password>@atlascluster.5pnpg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+Replace <password> with the password for the <username> user. Replace myFirstDatabase with the name of the database that connections will use by default. Ensure any option params are URL encoded.
+
+uncomment out mongo lines. setup local mongo db if desired
